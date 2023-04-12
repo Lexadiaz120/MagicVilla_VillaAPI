@@ -4,24 +4,31 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>2d895409-0201-4073-9ed0-99de8fb10f47</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="Models\NewFolder1\**" />
     <Compile Remove="Models\NewFolder2\**" />
-    <Compile Remove="NewFolder\**" />
     <Content Remove="Models\NewFolder1\**" />
     <Content Remove="Models\NewFolder2\**" />
-    <Content Remove="NewFolder\**" />
     <EmbeddedResource Remove="Models\NewFolder1\**" />
     <EmbeddedResource Remove="Models\NewFolder2\**" />
-    <EmbeddedResource Remove="NewFolder\**" />
     <None Remove="Models\NewFolder1\**" />
     <None Remove="Models\NewFolder2\**" />
-    <None Remove="NewFolder\**" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="7.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Serilog" Version="2.12.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
